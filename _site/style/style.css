@@ -79,11 +79,13 @@ img {
   height: 10vw;
 }
 /*about styles */
-
-.about img {
-  text-align: center;
-  height: 10vw;
+/*need to fix banner image */
+.meet-fatmen-thumb {
+  height: 25vw;
+  background-size: cover;
+  background-position: center;
 }
+
 
 .gallery-thumb {
   height: 25vw;
@@ -92,7 +94,6 @@ img {
 }
 
 /*challenges styles */
-
 
 
 
@@ -109,4 +110,8 @@ img {
 .banner.home {
   background-image: url('/images/RaceRegistration.jpg');
   min-height: 100vh;
+}
+.banner.challenges {
+  background-image: url('/images/KenyanChamp.jpg');
+  min-height: 110vh;
 }
