@@ -35,8 +35,9 @@ h2{
   padding: 10px;
 }
 h3{
-  color: paleturquoise;
+  color: cyan;
   font-size: 20px;
+  font-weight: bolder;
   padding: 10px;
 }
 p{
@@ -95,7 +96,10 @@ img {
 
 /*challenges styles */
 
-
+.next-challenges-past img{
+  align-items: center
+  justify-content: center;
+}
 
 /*gallery  styles */
 
@@ -114,4 +118,8 @@ img {
 .banner.challenges {
   background-image: url('/images/KenyanChamp.jpg');
   min-height: 110vh;
+}
+.banner.gallery {
+  background-image: url('/images/Champ.jpg');
+  min-height: 100vh;
 }
