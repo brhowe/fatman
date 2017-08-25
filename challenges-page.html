@@ -1,6 +1,10 @@
 ---
 layout: default
+
+leaderboard:
+  -
 ---
+
 <section class="center banner challenges">
     <img src="images/sddd.jpg" alt="my logo" />
         <h1>Fat Man Challenges</h1>
@@ -23,11 +27,6 @@ layout: default
 </section>
 <section>
   <h2>Already Knocked Off</h2>
-    {% for challenge in site.challenges %}
-      <a href="{{ challenges.url }}">
-        {{ challenge.title }} - {{ challenge.date }}
-      </a>
-    {% endfor %}
     <div class="grid next-challenges-past">
         <div class="col-3">
           <div class="center">
@@ -66,7 +65,7 @@ layout: default
 <section class="leaderboard">
   <h2>Fat Man Leaderboard</h2>
     <div class="grid">
-
+      
         <div class="col-1">
           <img src="images/1st.png" alt="First" />
         </div>
