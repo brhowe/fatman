@@ -35,7 +35,7 @@ h2{
   padding: 10px;
 }
 h3{
-  color: cyan;
+  color: rebeccapurple;
   font-size: 20px;
   font-weight: bolder;
   padding: 10px;
@@ -75,10 +75,7 @@ nav a:hover {
   text-decoration:none;
   border-bottom: 1px solid black;
 }
-img {
-  text-align: center;
-  height: 10vw;
-}
+
 /*about styles */
 /*need to fix banner image */
 .meet-fatmen-thumb {
@@ -96,9 +93,9 @@ img {
 
 /*challenges styles */
 
-.next-challenges-past img{
-  align-items: center
-  justify-content: center;
+.leaderboard img {
+  text-align: center;
+  height: 7vw;
 }
 
 /*gallery  styles */
