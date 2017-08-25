@@ -27,18 +27,18 @@ layout: default
         {{ challenge.title }} - {{ challenge.eventtime }}
       </a>
     {% endfor %}
-    <div class="grid events-detail">
-        {% for events in site.events %}
-        <div class="col-3">
-          <div class="center" style="background-image:url('/images/{{events.banner-image}}')">
-            <img src="images/{{events.image}}" />
-          </div>
-            <h3>{{ events.title }}</h3>
-            <h4>{{ events.subtitle }}</h4>
-            <p>{{ events.eventtime }}</p>
-            <p>{{ events.content }}</p>
+  <div class="grid events-detail">
+    {% for events in site.events %}
+      <div class="col-3">
+        <div class="center" style="background-image:url('/images/{{events.banner-image}}')">
+          <img src="images/{{events.image}}" />
         </div>
-        {% endfor %}
+          <h3>{{ events.title }}</h3>
+          <h4>{{ events.subtitle }}</h4>
+          <p>{{ events.eventtime }}</p>
+          <p>{{ events.content }}</p>
+    </div>
+    {% endfor %}
     </div>
 </section>
 <section class="leaderboard">
