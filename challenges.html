@@ -8,24 +8,23 @@ layout: default
 </section>
 <section class="grid next-challenges-detail">
     <h2 class="col-12">On the Go Now</h2>
+    {% for challenges in site.challenges %}
     <div class="col-6 now">
-      <div class="center">
-        <img src="images/1000km.jpg" alt="1000 km" />
+      <div class="center" style="background-image:url('/images/{{challenges.banner-image}}')">
+        <img src="images/{{challenges.image}}" />
       </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h3>{{ challenges.title }}</h3>
+        <h4>{{ challenges.subtitle }}</h4>
+        <p>{{ challenges.eventtime }}</p>
+        <p>{{ challenges.content }}</p>
     </div>
-    <div class="col-6 now">
-      <div class="center">
-        <img src="images/half.png" alt="half" />
-      </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
+    {% endfor %}
 </section>
 <section>
   <h2>Already Knocked Off</h2>
     {% for challenge in site.challenges %}
       <a href="{{ challenges.url }}">
-        {{ challenge.title }} - {{ challenge.date }}
+        {{ challenge.title }} - {{ challenge.eventtime }}
       </a>
     {% endfor %}
     <div class="grid next-challenges-past">
@@ -104,28 +103,4 @@ layout: default
     </div>
     <a href="https://www.strava.com/clubs/fatmen">Go To The FatMan Strava Club></a>
 </section>
-<section class="meet-fatmen-detail">
-  <h2>Meet The Fat Men</h2>
-  <div class="grid">
-    <div class="col-1">
-      <img src="images/lowrespassport.jpg" />
-    </div>
-    <div class="col-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="col-1">
-      <img src="images/nzflag.png" />
-    </div>
-      <div class="col-1">
-        <img src="images/lowrespassport.jpg" />
-      </div>
-      <div class="col-4">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-      <div class="col-1">
-        <img src="images/nzflag.png" />
-      </div>
-    </div>
-
-<!-- this is for Jekyll to repear 16 times-->
-</section>
+{% include meet-fatmen.html %}

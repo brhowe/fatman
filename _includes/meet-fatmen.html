@@ -1,0 +1,48 @@
+<section class="meet-fatmen-detail">
+  <h2>Meet The Fat Men</h2>
+  <div class="grid">
+    {% for fatman in site.fatmen %}
+      <div class="col-1">
+        <img src="images/fatmen/{{ fatman.banner-image }}" />
+      </div>
+      <div class="col-4">
+        <p class="meet-fatmen-name">
+          {{ fatman.title }}
+        </p>
+          <p class="meet-fatmen-subtitle">
+            {{ fatman.subtitle }}
+          </p>
+        <p class="meet-fatmen-description">
+          {{ fatman.content }}
+        </p>
+        <h5>FatMan Progress</h5>
+        <div class="grid meet-fatmen-runs">
+          <div class="col">
+            <p>Year</p>
+            <p> {{ fatman.runs[0].year }} </p>
+          </div>
+          <div class="col">
+            <p>Distance To Date</p>
+            <p> {{ fatman.runs[0].distance }} </p>
+          </div>
+          <div class="col">
+          <p>Events Done</p>
+          <p> {{fatman.runs[0].events-done }} </p>
+          </div>
+        </div>
+        <h5>Quarterly Distances</h5>
+        <div class="grid">
+          {% for quarter in fatman.runs[0].quarters %}
+          <div class="col-3">
+            {{ quarter.name }}: {{ quarter.distance }}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-1 meet-fatmen-flag">
+        <img src="images/flags/{{ fatman.flag }}" />
+      </div>
+    {% endfor %}
+
+<!-- this is for Jekyll to repear 16 times-->
+</section>
