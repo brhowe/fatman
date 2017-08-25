@@ -21,45 +21,24 @@ layout: default
     {% endfor %}
 </section>
 <section>
-  <h2>Already Knocked Off</h2>
+  <h2>Fat Man Events</h2>
     {% for challenge in site.challenges %}
       <a href="{{ challenges.url }}">
         {{ challenge.title }} - {{ challenge.eventtime }}
       </a>
     {% endfor %}
-    <div class="grid next-challenges-past">
+    <div class="grid events-detail">
+        {% for events in site.events %}
         <div class="col-3">
-          <div class="center">
-            <img src="images/RED.png" alt="Red" />
+          <div class="center" style="background-image:url('/images/{{events.banner-image}}')">
+            <img src="images/{{events.image}}" />
           </div>
-            <h3>Run Every Day December</h3>
-            <p>Gotta run 20mins or 3km every single day of December. No expecptions made... even on Xmas Day!</p>
-            <p>Fastest Fatman, Least Fastest Fatman, Silly Cock</p>
+            <h3>{{ events.title }}</h3>
+            <h4>{{ events.subtitle }}</h4>
+            <p>{{ events.eventtime }}</p>
+            <p>{{ events.content }}</p>
         </div>
-        <div class="col-3">
-          <div class="center">
-            <img src="images/10km.png" alt="10km" />
-          </div>
-            <h3>Shah Alam 10km Run</h3>
-            <p>Challenging 10km run in the middle of the night... not sure why... maybe to avoid the heat but that ain't never going to be the case + Fat Men love a good sweat up</p>
-            <p>Fastest Fatman, Least Fastest Fatman, Silly Cock</p>
-        </div>
-        <div class="col-3">
-          <div class="center">
-            <img src="images/12km.png" alt="12km" />
-          </div>
-            <h3>Highlander Trail Run</h3>
-            <p>Brutal trail run with something like 500meters in vertical climb.  Epic race from Man of Steele winning it outright and then having shots with the local Mayor</p>
-            <p>Fastest Fatman, Least Fastest Fatman, Silly Cock</p>
-        </div>
-        <div class="col-3">
-          <div class="center">
-            <img src="images/half.png" alt="21km" />
-          </div>
-            <h3>Penange Bridge Half Marathon</h3>
-            <p>The first 1/2 Marathon the fat men conquered and the inaugural run at that.  A great weekend of golf, boozing, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            <p>Fastest Fatman, Least Fastest Fatman, Silly Cock</p>
-        </div>
+        {% endfor %}
     </div>
 </section>
 <section class="leaderboard">
