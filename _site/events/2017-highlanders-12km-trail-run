@@ -40,13 +40,13 @@
         </div>
       </nav>
     </header>
-    <section class="grid banner" style="background-image: url(/images/RunnerSign.jpg)">
+    <section class="grid banner" style="background-image: url(/images/KenyanChamp.jpg)">
   <div class="center" style="background-image:url('/images/')">
     <img src="images/challenges/" />
   </div>
   <h1 class="col-12">Highlander 12km Trail Run</h1>
   <p class="col-12">A tough 500mtr ascent climb in the KL bush</p>
-  <p class="col=12">2017-08-26 11:46:00 +0800</p>
+  <p class="col=12">2017-08-26 12:00:27 +0800</p>
 </section>
 
     <footer>

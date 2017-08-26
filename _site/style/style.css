@@ -118,6 +118,17 @@ header nav{
 }
 
 /*challenges styles */
+.challenges img{
+  height:10vw;
+  border:none;
+}
+.events img{
+  height: 10vw;
+  border:none;
+}
+.events {
+  background-size: contain;
+}
 
 .leaderboard img {
   text-align: center;
