@@ -9,7 +9,7 @@ img{
 }
 /*universal styles */
 
-/* temp */ section, div {border: 1px solid orange;}
+/* temp  section, div {border: 1px solid orange;}*/
 
 body{
   font-family: 'Exo 2', sans-serif;
@@ -21,6 +21,7 @@ h1, h2, h3, h4, h5, h6{
   font-family: 'Fira Sans', sans-serif;
   letter-spacing: 1px;
   line-height: 1.2;
+  border:none;
 }
 h1{
   color:blue;
@@ -60,10 +61,12 @@ p{
   background-size: cover;
   background-position: center;
   padding-top: 8%;
+  border:none;
 }
 .banner p{
   font-size: 22px;
   color: white;
+  border:none;
 }
 
 
@@ -136,6 +139,7 @@ header nav{
 .leaderboard img {
   text-align: center;
   height: 7vw;
+  border: none;
 }
 
 /*gallery  styles */
