@@ -122,6 +122,9 @@ header nav{
   height:10vw;
   border:none;
 }
+.challenges {
+  background-size: contain;
+}
 .events img{
   height: 10vw;
   border:none;
@@ -159,6 +162,9 @@ header nav{
   min-height: 100vh;
 }
 
+footer {
+  background-color: lavender;
+}
 /* BURDER MENU */
 
 .burger-menu {
