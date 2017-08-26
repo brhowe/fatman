@@ -40,6 +40,12 @@ h3{
   font-weight: bolder;
   padding: 10px;
 }
+h4{
+  color: slateblue;
+  font-size: 15px;
+  font-weight: bold;
+  padding:10px;
+}
 p{
   padding: 20px;
   line-height: 1.8;
@@ -77,9 +83,22 @@ nav a:hover {
 }
 
 /*about styles */
-/*need to fix banner image */
+
+#about {
+  background-color: lavender;
+}
+#good-cause {
+  background-color: lavender;
+}
+
+.logo{
+  width:10vw;
+  border-radius: 50%;
+  margin:0 auto;
+}
+
 .meet-fatmen-thumb {
-  height: 25vw;
+  height: 40vw;
   background-size: cover;
   background-position: center;
 }
@@ -109,15 +128,15 @@ nav a:hover {
 /* background images */
 
 .banner.home {
-  background-image: url('/images/RaceRegistration.jpg');
+  background-image: url('/images/penang-bridge/Champ2.jpg');
   min-height: 100vh;
 }
 .banner.challenges {
-  background-image: url('/images/KenyanChamp.jpg');
+  background-image: url('/images/penang-bridge/KenyanChamp.jpg');
   min-height: 110vh;
 }
 .banner.gallery {
-  background-image: url('/images/Champ.jpg');
+  background-image: url('/images/penang-bridge/prizegiving.jpg');
   min-height: 100vh;
 }
 
