@@ -1,17 +1,41 @@
 ---
 layout: default
 ---
-<section class="grid next-challenges-detail">
-    <h2 class="col-12">On the Go Now</h2>
-    {% for challenges in site.challenges %}
-    <div class="col-6 now">
-      <div class="center" style="background-image:url('/images/{{challenges.banner-image}}')">
-        <img src="images/challenges/{{challenges.image}}" />
-      </div>
-        <h3>{{ challenges.title }}</h3>
-        <h4>{{ challenges.subtitle }}</h4>
-        <p>{{ challenges.eventtime }}</p>
-        <p>{{ challenges.content }}</p>
+<section class="banner" style="background-image:url(/images{{ page.id }}/{{ page.banner-image }})">
+    <img src="/images/badges/{{ page.image }}" />
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.subtitle }}</p>
+</section>
+<section class="plain-text-section">
+  <p>{{ page.content }}
+  </p>
+</section>
+<section class="prizes-section">
+  <h2>Dishonorable Mentions</h2>
+  <div class="grid">
+    <div class="col-4 prize-winner">
+      <img src="/images/badges/1st.png" />
+      <h3>{{ page.winner.name }}</h3>
+      <p>{{ page.winner.distance }}</p>
+    </div>
+    <div class="col-4 prize-winner">
+      <img src="/images/badges/2nd.jpg" />
+      <h3>{{ page.second.name }}</h3>
+      <p>{{ page.second.distance }}</p>
+    </div>
+    <div class="col-4 prize-winner">
+      <img src="/images/badges/sillycock.jpg" />
+      <h3>{{ page.sillycock.name }}</h3>
+      <p>{{ page.sillycock.distance }}</p>
+    </div>
+  </div>
+</section>
+<section class="gallery-section">
+    <h2>Gallery</h2>
+    <div class="grid">
+    {% for photo in page.gallery %}
+    <div class="col-3 gallery-thumb" style="background-image:url(/images{{ page.id}}/{{ photo.photo }})">
     </div>
     {% endfor %}
+    </div>
 </section>

@@ -1,11 +1,41 @@
 ---
 layout: default
 ---
-<section class="grid banner" style="background-image: url(/images/{{page.banner-image}})">
-  <div class="center" style="background-image:url('/images/{{challenges.banner-image}}')">
-    <img src="images/challenges/{{challenges.image}}" />
+<section class="banner" style="background-image:url(/images{{ page.id }}/{{ page.banner-image }})">
+    <img src="/images/badges/{{ page.image }}" />
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.subtitle }}</p>
+</section>
+<section class="plain-text-section">
+  <p>{{ page.content }}
+  </p>
+</section>
+<section class="prizes-section">
+  <h2>Dishonorable Mentions</h2>
+  <div class="grid">
+    <div class="col-4 prize-winner">
+      <img src="/images/badges/1st.png" />
+      <h3>{{ page.winner.name }}</h3>
+      <p>{{ page.winner.distance }}</p>
+    </div>
+    <div class="col-4 prize-winner">
+      <img src="/images/badges/2nd.jpg" />
+      <h3>{{ page.second.name }}</h3>
+      <p>{{ page.second.distance }}</p>
+    </div>
+    <div class="col-4 prize-winner">
+      <img src="/images/badges/sillycock.jpg" />
+      <h3>{{ page.sillycock.name }}</h3>
+      <p>{{ page.sillycock.distance }}</p>
+    </div>
   </div>
-  <h1 class="col-12">{{page.title}}</h1>
-  <p class="col-12">{{page.subtitle}}</p>
-  <p class="col=12">{{page.date}}</p>
+</section>
+<section class="gallery-section">
+    <h2>Gallery</h2>
+    <div class="grid">
+    {% for photo in page.gallery %}
+    <div class="col-3 gallery-thumb" style="background-image:url(/images{{ page.id}}/{{ photo.photo }})">
+    </div>
+    {% endfor %}
+    </div>
 </section>
