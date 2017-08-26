@@ -59,6 +59,7 @@ p{
 .banner {
   background-size: cover;
   background-position: center;
+  padding-top: 8%;
 }
 .banner p{
   font-size: 22px;
@@ -98,11 +99,14 @@ nav a:hover {
 }
 
 .meet-fatmen-thumb {
-  height: 40vw;
+  height: 45vw;
   background-size: cover;
   background-position: center;
 }
-
+.meet-fatmen-thumb p{
+  font-size: 22px;
+  color: white;
+}
 
 .gallery-thumb {
   height: 25vw;
@@ -131,6 +135,7 @@ nav a:hover {
   background-image: url('/images/penang-bridge/Champ2.jpg');
   min-height: 100vh;
 }
+
 .banner.challenges {
   background-image: url('/images/penang-bridge/KenyanChamp.jpg');
   min-height: 110vh;
