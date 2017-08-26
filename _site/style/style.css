@@ -82,6 +82,9 @@ nav a:hover {
   text-decoration:none;
   border-bottom: 1px solid black;
 }
+header nav{
+  background-color: lavender;
+}
 
 /*about styles */
 
@@ -132,16 +135,16 @@ nav a:hover {
 /* background images */
 
 .banner.home {
-  background-image: url('/images/penang-bridge/Champ2.jpg');
-  min-height: 100vh;
+  background-image: url('/images/KenyanChampdenim.jpg');
+  min-height: 110vh;
 }
 
 .banner.challenges {
-  background-image: url('/images/penang-bridge/KenyanChamp.jpg');
-  min-height: 110vh;
+  background-image: url('/images/Champ2denim.jpg');
+  min-height: 100vh;
 }
 .banner.gallery {
-  background-image: url('/images/penang-bridge/prizegiving.jpg');
+  background-image: url('/images/prizegivingdenim.jpg');
   min-height: 100vh;
 }
 
@@ -172,7 +175,7 @@ nav a:hover {
   white-space:nowrap;
 }
 .burger-menu li{list-style:none}
-/* this is where you style the button if you want to add more space between the spans than add padding to this div but make sure you also add it to the top and bottom active classes on there top/bottom or else your cross wont line up*/
+
 .burger-button {
   position:fixed;
   top: 2vh;
@@ -180,7 +183,7 @@ nav a:hover {
   z-index: 9999999999;
   padding: 8px;
 }
-/*this is where you can chand the color of the buttons*/
+
 .burger-button span{
   width: 25px;
   border: 2px solid black;
@@ -199,7 +202,6 @@ nav a:hover {
   bottom: 02.5px;
 }
 
-/* target the burger top when the button has the active class and give it a transform: rotateZ(45deg);*/
 .active .burger-top{
   transform: rotateZ(45deg);
   top:8px;
@@ -211,4 +213,16 @@ nav a:hover {
 }
 .active .burger-middle{
   opacity:0;
+}
+.mob-show {
+  display: none;
+}
+
+@media all and (max-width:465px){
+  .mob-show{
+    display: block;
+  }
+.mob-hide {
+  display: none;
+}
 }

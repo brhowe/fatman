@@ -1,10 +1,17 @@
 ---
 layout: default
 ---
-
-<section class="grid banner challenges" style="background-image: url(/images/{{page.banner-images}})">
-  <img scr ="url(/images/{{page.image-images}})">
-  <h1 class="col-12">{{page.title}}</h1>
-  <p class="col-12">{{page.subtitle}}</p>
-  <p class="col=12">{{page.date}}</p>
+<section class="grid next-challenges-detail">
+    <h2 class="col-12">On the Go Now</h2>
+    {% for challenges in site.challenges %}
+    <div class="col-6 now">
+      <div class="center" style="background-image:url('/images/{{challenges.banner-image}}')">
+        <img src="images/challenges/{{challenges.image}}" />
+      </div>
+        <h3>{{ challenges.title }}</h3>
+        <h4>{{ challenges.subtitle }}</h4>
+        <p>{{ challenges.eventtime }}</p>
+        <p>{{ challenges.content }}</p>
+    </div>
+    {% endfor %}
 </section>
