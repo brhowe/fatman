@@ -16,17 +16,17 @@ layout: default
     <div class="col-4 prize-winner">
       <img src="/images/badges/1st.png" />
       <h3>{{ page.winner.name }}</h3>
-      <p>{{ page.winner.distance }}</p>
+      <p>{{ page.winner.time }}</p>
     </div>
     <div class="col-4 prize-winner">
       <img src="/images/badges/2nd.jpg" />
       <h3>{{ page.second.name }}</h3>
-      <p>{{ page.second.distance }}</p>
+      <p>{{ page.second.time }}</p>
     </div>
     <div class="col-4 prize-winner">
       <img src="/images/badges/sillycock.jpg" />
       <h3>{{ page.sillycock.name }}</h3>
-      <p>{{ page.sillycock.distance }}</p>
+      <p>{{ page.sillycock.time }}</p>
     </div>
   </div>
 </section>
@@ -34,7 +34,7 @@ layout: default
     <h2>Gallery</h2>
     <div class="grid">
     {% for photo in page.gallery %}
-    <div class="col-3 gallery-thumb" style="background-image:url(/images{{ page.id}}/{{ photo.photo }})">
+    <div class="col-3 gallery-thumb" style="background-image:url(/images/{{ page.id}}/{{ photo.photo }})">
     </div>
     {% endfor %}
     </div>
