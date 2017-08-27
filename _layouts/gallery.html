@@ -1,16 +1,43 @@
 ---
 layout: default
+gallery:
+  - title: TESTING
+    photo: BeerRun.jpg
 ---
 
-
-<section id="gallery">
-    <h2>Fat Man Gallery</h2>
-    <h3>{{gallery.title}}</h3>
-    <div class="grid">
-        <div class="col-3 gallery-thumb" style="background-image:url({{' gallery.images/1000km/'}})">
-        </div>
-        <div class="col-3 gallery-thumb" style="background-image:url({{' gallery.images/penang-bridge/'}})">
-        </div>
-        <div class="col-3 gallery-thumb" style="background-image:url({{' gallery.images/classics/'}})">
+<section class="center banner gallery">
+    <div class="banner">
+        <h1>Shots of the Fat Men</h1>
+        <p>Warning! Some images may offend!</p>
+        <div class="logo">
+          <img src="images/sddd.jpg" alt="my logo" />
         </div>
     </div>
+</section>
+<section id="gallery">
+    <h2>Fat Man Gallery</h2>
+    <h3>1000km pics</h3>
+    <div class="grid">
+        <div class="col-3 gallery-thumb" style="background-image:url(/images/challenges/2017/BeerRun.jpg)">
+        </div>
+        <div class="col-3 gallery-thumb" style="background-image:url(/images/challenges/2017/Compression.jpg)">
+        </div>
+        <div class="col-3 gallery-thumb" style="background-image:url(/images/challenges/2017/Naughty.jpg)">
+        </div>
+    </div>
+<section>
+  <!--
+  <section>
+    {% for gallery in page.gallery %}
+      <div>
+        <h2>{{gallery.title}}</h2>
+        <img src="images/challenges/2017/1000km/{{gallery.photo}}" />
+      </div>
+ -->
+    <!-- loop through all photos in the challenges galery -->
+    <!-- Add a new HTML div -->
+    <!-- Add a p with the photo's caption -->
+    <!-- Close teh loop -->
+  {% endfor %}
+  </section> -
+</section>
